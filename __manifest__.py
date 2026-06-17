@@ -7,7 +7,7 @@
     """,
     'author': 'Mamenosoa',
     'category': 'Inventory/Inventory',
-    'depends': ['stock', 'purchase'],
+    'depends': ['stock', 'purchase_stock', 'purchase'],
     'data': [
         'views/product_template_views.xml',
         'views/stock_move_line_view.xml',
