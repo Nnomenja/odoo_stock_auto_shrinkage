@@ -22,9 +22,10 @@ class PurchaseOrderLine(models.Model):
     #                                                           SQL CONSTRAINTS 
     # -------------------------------------------------------------------------
 
-    _check_final_qty_positive = [
-        ('final_qty_positive', 'CHECK(final_qty >= 0)', 'La quantité finale doit être positive.'),
-    ]
+    _check_final_qty_positive = models.Constraint(
+        'CHECK(final_qty >= 0)',
+        'La quantité finale doit être positive.'
+    )
 
 
     # -------------------------------------------------------------------------
